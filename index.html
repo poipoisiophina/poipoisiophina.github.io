@@ -1,0 +1,234 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+                                        <title data-i18n="files_list">Repository index — Files</title>
+                                        <link rel="icon" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%231a73e8'/><text x='50%' y='54%' font-size='28' text-anchor='middle' fill='white' font-family='Inter, Arial, sans-serif'>POI</text></svg>">
+        <script>
+            // Translations will be injected server-side by replacing the {"en": {"title": "Uploader", "drop_hint": "Drop a file here or click to select", "upload": "Upload", "refresh": "Refresh", "settings": "Settings", "purge": "Purge", "confirm_purge": "Are you sure you want to permanently delete the repository {repo}?", "upload_success": "Upload successful", "upload_failed": "Upload failed", "files_list": "Files", "pages_url": "Pages URL", "select_repo": "Repository", "choose_file": "Choose a file", "close": "Close", "json_logs": "JSON Logs", "language": "Language", "file_too_large_warning": "Warning: the following file(s) exceed the {limit} limit and cannot be uploaded: {files}", "server_error": "Server error: {detail}"}, "ja": {"title": "\u30a2\u30c3\u30d7\u30ed\u30fc\u30c0\u30fc", "drop_hint": "\u3053\u3053\u306b\u30d5\u30a1\u30a4\u30eb\u3092\u30c9\u30ed\u30c3\u30d7\u3059\u308b\u304b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044", "upload": "\u9001\u4fe1", "refresh": "\u66f4\u65b0", "settings": "\u8a2d\u5b9a", "purge": "\u524a\u9664", "confirm_purge": "\u672c\u5f53\u306b\u30ea\u30dd\u30b8\u30c8\u30ea {repo} \u3092\u5b8c\u5168\u306b\u524a\u9664\u3057\u307e\u3059\u304b\uff1f", "upload_success": "\u9001\u4fe1\u6210\u529f", "upload_failed": "\u9001\u4fe1\u5931\u6557", "files_list": "\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7", "pages_url": "\u30da\u30fc\u30b8URL", "select_repo": "\u30ea\u30dd\u30b8\u30c8\u30ea", "choose_file": "\u30d5\u30a1\u30a4\u30eb\u3092\u9078\u629e", "close": "\u9589\u3058\u308b", "json_logs": "JSON\u30ed\u30b0", "language": "\u8a00\u8a9e", "file_too_large_warning": "\u8b66\u544a: \u6b21\u306e\u30d5\u30a1\u30a4\u30eb\u306f {limit} \u306e\u4e0a\u9650\u3092\u8d85\u3048\u3066\u3044\u308b\u305f\u3081\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093: {files}", "server_error": "\u30b5\u30fc\u30d0\u30fc\u30a8\u30e9\u30fc: {detail}"}, "fr": {"title": "T\u00e9l\u00e9verseur", "drop_hint": "D\u00e9posez un fichier ici ou cliquez pour s\u00e9lectionner", "upload": "T\u00e9l\u00e9verser", "refresh": "Rafra\u00eechir", "settings": "Param\u00e8tres", "purge": "Purger", "confirm_purge": "\u00cates-vous s\u00fbr de vouloir supprimer d\u00e9finitivement le d\u00e9p\u00f4t {repo} ?", "upload_success": "T\u00e9l\u00e9versement r\u00e9ussi", "upload_failed": "\u00c9chec du t\u00e9l\u00e9versement", "files_list": "Fichiers", "pages_url": "URL des pages", "select_repo": "Repository", "choose_file": "Choisir un fichier", "close": "Fermer", "json_logs": "Journaux JSON", "language": "Langue", "file_too_large_warning": "Attention : le(s) fichier(s) suivant(s) d\u00e9passent la limite de {limit} et ne peuvent pas \u00eatre t\u00e9l\u00e9vers\u00e9s : {files}", "server_error": "Erreur serveur : {detail}"}, "fr-CA": {"title": "T\u00e9l\u00e9verseur de fichiers", "drop_hint": "D\u00e9posez un fichier ici ou cliquez pour s\u00e9lectionner", "upload": "T\u00e9l\u00e9verser", "refresh": "Rafra\u00eechir", "settings": "Param\u00e8tres", "purge": "Supprimer", "confirm_purge": "\u00cates-vous certain de vouloir supprimer d\u00e9finitivement le d\u00e9p\u00f4t {repo} ?", "upload_success": "T\u00e9l\u00e9versement r\u00e9ussi", "upload_failed": "\u00c9chec du t\u00e9l\u00e9versement", "files_list": "Fichiers", "pages_url": "URL des pages", "select_repo": "D\u00e9p\u00f4t", "choose_file": "Choisir un fichier", "close": "Fermer", "json_logs": "Journaux JSON", "language": "Langue", "file_too_large_warning": "Attention : le(s) fichier(s) suivant(s) d\u00e9passent la limite de {limit} et ne peuvent pas \u00eatre t\u00e9l\u00e9vers\u00e9s : {files}", "server_error": "Erreur serveur : {detail}"}, "ru": {"title": "\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a", "drop_hint": "\u041f\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u0435 \u0444\u0430\u0439\u043b \u0441\u044e\u0434\u0430 \u0438\u043b\u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u0434\u043b\u044f \u0432\u044b\u0431\u043e\u0440\u0430", "upload": "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c", "refresh": "\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", "settings": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", "purge": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c", "confirm_purge": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b, \u0447\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u043d\u0430\u0432\u0441\u0435\u0433\u0434\u0430 \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439 {repo}?", "upload_success": "\u0424\u0430\u0439\u043b \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d", "upload_failed": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438 \u0444\u0430\u0439\u043b\u0430", "files_list": "\u0424\u0430\u0439\u043b\u044b", "pages_url": "URL \u0441\u0442\u0440\u0430\u043d\u0438\u0446", "select_repo": "\u0420\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439", "choose_file": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u0430\u0439\u043b", "close": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c", "json_logs": "\u0416\u0443\u0440\u043d\u0430\u043b\u044b JSON", "language": "\u042f\u0437\u044b\u043a", "file_too_large_warning": "\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435: \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0435 \u0444\u0430\u0439\u043b(\u044b) \u043f\u0440\u0435\u0432\u044b\u0448\u0430\u044e\u0442 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u0435 {limit} \u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u044b: {files}", "server_error": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430: {detail}"}, "ar": {"title": "\u0631\u0627\u0641\u0639 \u0627\u0644\u0645\u0644\u0641\u0627\u062a", "drop_hint": "\u0627\u0633\u062d\u0628 \u0645\u0644\u0641\u064b\u0627 \u0647\u0646\u0627 \u0623\u0648 \u0627\u0646\u0642\u0631 \u0644\u0644\u0627\u062e\u062a\u064a\u0627\u0631", "upload": "\u0631\u0641\u0639", "refresh": "\u062a\u062d\u062f\u064a\u062b", "settings": "\u0627\u0644\u0625\u0639\u062f\u0627\u062f\u0627\u062a", "purge": "\u062a\u0637\u0647\u064a\u0631", "confirm_purge": "\u0647\u0644 \u0623\u0646\u062a \u0645\u062a\u0623\u0643\u062f \u0623\u0646\u0643 \u062a\u0631\u064a\u062f \u062d\u0630\u0641 \u0627\u0644\u0645\u0633\u062a\u0648\u062f\u0639 {repo} \u0646\u0647\u0627\u0626\u064a\u064b\u0627\u061f", "upload_success": "\u062a\u0645 \u0631\u0641\u0639 \u0627\u0644\u0645\u0644\u0641 \u0628\u0646\u062c\u0627\u062d", "upload_failed": "\u0641\u0634\u0644 \u0631\u0641\u0639 \u0627\u0644\u0645\u0644\u0641", "files_list": "\u0627\u0644\u0645\u0644\u0641\u0627\u062a", "pages_url": "\u0631\u0627\u0628\u0637 \u0627\u0644\u0635\u0641\u062d\u0627\u062a", "select_repo": "\u0627\u0644\u0645\u0633\u062a\u0648\u062f\u0639", "choose_file": "\u0627\u062e\u062a\u0631 \u0645\u0644\u0641\u064b\u0627", "close": "\u0625\u063a\u0644\u0627\u0642", "json_logs": "\u0633\u062c\u0644\u0627\u062a JSON", "language": "\u0627\u0644\u0644\u063a\u0629", "file_too_large_warning": "\u062a\u062d\u0630\u064a\u0631: \u0627\u0644\u0645\u0644\u0641(\u0645\u0644\u0641\u0627\u062a) \u0627\u0644\u062a\u0627\u0644\u064a\u0629 \u062a\u062a\u062c\u0627\u0648\u0632 \u0627\u0644\u062d\u062f {limit} \u0648\u0644\u0627 \u064a\u0645\u0643\u0646 \u062a\u062d\u0645\u064a\u0644\u0647\u0627: {files}", "server_error": "\u062e\u0637\u0623 \u0641\u064a \u0627\u0644\u062e\u0627\u062f\u0645: {detail}"}, "zh-TW": {"title": "\u6a94\u6848\u4e0a\u50b3\u5668", "drop_hint": "\u5c07\u6a94\u6848\u62d6\u66f3\u5230\u6b64\u8655\u6216\u9ede\u64ca\u9078\u64c7", "upload": "\u4e0a\u50b3", "refresh": "\u91cd\u65b0\u6574\u7406", "settings": "\u8a2d\u5b9a", "purge": "\u6e05\u9664", "confirm_purge": "\u60a8\u78ba\u5b9a\u8981\u6c38\u4e45\u522a\u9664\u5132\u5b58\u5eab {repo} \u55ce\uff1f", "upload_success": "\u4e0a\u50b3\u6210\u529f", "upload_failed": "\u4e0a\u50b3\u5931\u6557", "files_list": "\u6a94\u6848\u5217\u8868", "pages_url": "\u7db2\u9801\u9023\u7d50", "select_repo": "\u5132\u5b58\u5eab", "choose_file": "\u9078\u64c7\u6a94\u6848", "close": "\u95dc\u9589", "json_logs": "JSON \u65e5\u8a8c", "language": "\u8a9e\u8a00", "file_too_large_warning": "\u8b66\u544a\uff1a\u4e0b\u5217\u6a94\u6848\u8d85\u904e {limit} \u9650\u5236\uff0c\u7121\u6cd5\u4e0a\u50b3\uff1a {files}", "server_error": "\u4f3a\u670d\u5668\u932f\u8aa4\uff1a{detail}"}, "es": {"title": "Subidor de archivos", "drop_hint": "Arrastra un archivo aqu\u00ed o haz clic para seleccionar", "upload": "Subir", "refresh": "Actualizar", "settings": "Configuraci\u00f3n", "purge": "Eliminar", "confirm_purge": "\u00bfEst\u00e1 seguro de que desea eliminar permanentemente el repositorio {repo}?", "upload_success": "Subida exitosa", "upload_failed": "Error al subir", "files_list": "Archivos", "pages_url": "URL de las p\u00e1ginas", "select_repo": "Repositorio", "choose_file": "Elegir archivo", "close": "Cerrar", "json_logs": "Registros JSON", "language": "Idioma", "file_too_large_warning": "Advertencia: el/los siguiente(s) archivo(s) superan el l\u00edmite de {limit} y no se pueden cargar: {files}", "server_error": "Error del servidor: {detail}"}} placeholder
+            // (the server replaces {"en": {"title": "Uploader", "drop_hint": "Drop a file here or click to select", "upload": "Upload", "refresh": "Refresh", "settings": "Settings", "purge": "Purge", "confirm_purge": "Are you sure you want to permanently delete the repository {repo}?", "upload_success": "Upload successful", "upload_failed": "Upload failed", "files_list": "Files", "pages_url": "Pages URL", "select_repo": "Repository", "choose_file": "Choose a file", "close": "Close", "json_logs": "JSON Logs", "language": "Language", "file_too_large_warning": "Warning: the following file(s) exceed the {limit} limit and cannot be uploaded: {files}", "server_error": "Server error: {detail}"}, "ja": {"title": "\u30a2\u30c3\u30d7\u30ed\u30fc\u30c0\u30fc", "drop_hint": "\u3053\u3053\u306b\u30d5\u30a1\u30a4\u30eb\u3092\u30c9\u30ed\u30c3\u30d7\u3059\u308b\u304b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044", "upload": "\u9001\u4fe1", "refresh": "\u66f4\u65b0", "settings": "\u8a2d\u5b9a", "purge": "\u524a\u9664", "confirm_purge": "\u672c\u5f53\u306b\u30ea\u30dd\u30b8\u30c8\u30ea {repo} \u3092\u5b8c\u5168\u306b\u524a\u9664\u3057\u307e\u3059\u304b\uff1f", "upload_success": "\u9001\u4fe1\u6210\u529f", "upload_failed": "\u9001\u4fe1\u5931\u6557", "files_list": "\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7", "pages_url": "\u30da\u30fc\u30b8URL", "select_repo": "\u30ea\u30dd\u30b8\u30c8\u30ea", "choose_file": "\u30d5\u30a1\u30a4\u30eb\u3092\u9078\u629e", "close": "\u9589\u3058\u308b", "json_logs": "JSON\u30ed\u30b0", "language": "\u8a00\u8a9e", "file_too_large_warning": "\u8b66\u544a: \u6b21\u306e\u30d5\u30a1\u30a4\u30eb\u306f {limit} \u306e\u4e0a\u9650\u3092\u8d85\u3048\u3066\u3044\u308b\u305f\u3081\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093: {files}", "server_error": "\u30b5\u30fc\u30d0\u30fc\u30a8\u30e9\u30fc: {detail}"}, "fr": {"title": "T\u00e9l\u00e9verseur", "drop_hint": "D\u00e9posez un fichier ici ou cliquez pour s\u00e9lectionner", "upload": "T\u00e9l\u00e9verser", "refresh": "Rafra\u00eechir", "settings": "Param\u00e8tres", "purge": "Purger", "confirm_purge": "\u00cates-vous s\u00fbr de vouloir supprimer d\u00e9finitivement le d\u00e9p\u00f4t {repo} ?", "upload_success": "T\u00e9l\u00e9versement r\u00e9ussi", "upload_failed": "\u00c9chec du t\u00e9l\u00e9versement", "files_list": "Fichiers", "pages_url": "URL des pages", "select_repo": "Repository", "choose_file": "Choisir un fichier", "close": "Fermer", "json_logs": "Journaux JSON", "language": "Langue", "file_too_large_warning": "Attention : le(s) fichier(s) suivant(s) d\u00e9passent la limite de {limit} et ne peuvent pas \u00eatre t\u00e9l\u00e9vers\u00e9s : {files}", "server_error": "Erreur serveur : {detail}"}, "fr-CA": {"title": "T\u00e9l\u00e9verseur de fichiers", "drop_hint": "D\u00e9posez un fichier ici ou cliquez pour s\u00e9lectionner", "upload": "T\u00e9l\u00e9verser", "refresh": "Rafra\u00eechir", "settings": "Param\u00e8tres", "purge": "Supprimer", "confirm_purge": "\u00cates-vous certain de vouloir supprimer d\u00e9finitivement le d\u00e9p\u00f4t {repo} ?", "upload_success": "T\u00e9l\u00e9versement r\u00e9ussi", "upload_failed": "\u00c9chec du t\u00e9l\u00e9versement", "files_list": "Fichiers", "pages_url": "URL des pages", "select_repo": "D\u00e9p\u00f4t", "choose_file": "Choisir un fichier", "close": "Fermer", "json_logs": "Journaux JSON", "language": "Langue", "file_too_large_warning": "Attention : le(s) fichier(s) suivant(s) d\u00e9passent la limite de {limit} et ne peuvent pas \u00eatre t\u00e9l\u00e9vers\u00e9s : {files}", "server_error": "Erreur serveur : {detail}"}, "ru": {"title": "\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a", "drop_hint": "\u041f\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u0435 \u0444\u0430\u0439\u043b \u0441\u044e\u0434\u0430 \u0438\u043b\u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u0434\u043b\u044f \u0432\u044b\u0431\u043e\u0440\u0430", "upload": "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c", "refresh": "\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", "settings": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", "purge": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c", "confirm_purge": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b, \u0447\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u043d\u0430\u0432\u0441\u0435\u0433\u0434\u0430 \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439 {repo}?", "upload_success": "\u0424\u0430\u0439\u043b \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d", "upload_failed": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438 \u0444\u0430\u0439\u043b\u0430", "files_list": "\u0424\u0430\u0439\u043b\u044b", "pages_url": "URL \u0441\u0442\u0440\u0430\u043d\u0438\u0446", "select_repo": "\u0420\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439", "choose_file": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u0430\u0439\u043b", "close": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c", "json_logs": "\u0416\u0443\u0440\u043d\u0430\u043b\u044b JSON", "language": "\u042f\u0437\u044b\u043a", "file_too_large_warning": "\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435: \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0435 \u0444\u0430\u0439\u043b(\u044b) \u043f\u0440\u0435\u0432\u044b\u0448\u0430\u044e\u0442 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u0435 {limit} \u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u044b: {files}", "server_error": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430: {detail}"}, "ar": {"title": "\u0631\u0627\u0641\u0639 \u0627\u0644\u0645\u0644\u0641\u0627\u062a", "drop_hint": "\u0627\u0633\u062d\u0628 \u0645\u0644\u0641\u064b\u0627 \u0647\u0646\u0627 \u0623\u0648 \u0627\u0646\u0642\u0631 \u0644\u0644\u0627\u062e\u062a\u064a\u0627\u0631", "upload": "\u0631\u0641\u0639", "refresh": "\u062a\u062d\u062f\u064a\u062b", "settings": "\u0627\u0644\u0625\u0639\u062f\u0627\u062f\u0627\u062a", "purge": "\u062a\u0637\u0647\u064a\u0631", "confirm_purge": "\u0647\u0644 \u0623\u0646\u062a \u0645\u062a\u0623\u0643\u062f \u0623\u0646\u0643 \u062a\u0631\u064a\u062f \u062d\u0630\u0641 \u0627\u0644\u0645\u0633\u062a\u0648\u062f\u0639 {repo} \u0646\u0647\u0627\u0626\u064a\u064b\u0627\u061f", "upload_success": "\u062a\u0645 \u0631\u0641\u0639 \u0627\u0644\u0645\u0644\u0641 \u0628\u0646\u062c\u0627\u062d", "upload_failed": "\u0641\u0634\u0644 \u0631\u0641\u0639 \u0627\u0644\u0645\u0644\u0641", "files_list": "\u0627\u0644\u0645\u0644\u0641\u0627\u062a", "pages_url": "\u0631\u0627\u0628\u0637 \u0627\u0644\u0635\u0641\u062d\u0627\u062a", "select_repo": "\u0627\u0644\u0645\u0633\u062a\u0648\u062f\u0639", "choose_file": "\u0627\u062e\u062a\u0631 \u0645\u0644\u0641\u064b\u0627", "close": "\u0625\u063a\u0644\u0627\u0642", "json_logs": "\u0633\u062c\u0644\u0627\u062a JSON", "language": "\u0627\u0644\u0644\u063a\u0629", "file_too_large_warning": "\u062a\u062d\u0630\u064a\u0631: \u0627\u0644\u0645\u0644\u0641(\u0645\u0644\u0641\u0627\u062a) \u0627\u0644\u062a\u0627\u0644\u064a\u0629 \u062a\u062a\u062c\u0627\u0648\u0632 \u0627\u0644\u062d\u062f {limit} \u0648\u0644\u0627 \u064a\u0645\u0643\u0646 \u062a\u062d\u0645\u064a\u0644\u0647\u0627: {files}", "server_error": "\u062e\u0637\u0623 \u0641\u064a \u0627\u0644\u062e\u0627\u062f\u0645: {detail}"}, "zh-TW": {"title": "\u6a94\u6848\u4e0a\u50b3\u5668", "drop_hint": "\u5c07\u6a94\u6848\u62d6\u66f3\u5230\u6b64\u8655\u6216\u9ede\u64ca\u9078\u64c7", "upload": "\u4e0a\u50b3", "refresh": "\u91cd\u65b0\u6574\u7406", "settings": "\u8a2d\u5b9a", "purge": "\u6e05\u9664", "confirm_purge": "\u60a8\u78ba\u5b9a\u8981\u6c38\u4e45\u522a\u9664\u5132\u5b58\u5eab {repo} \u55ce\uff1f", "upload_success": "\u4e0a\u50b3\u6210\u529f", "upload_failed": "\u4e0a\u50b3\u5931\u6557", "files_list": "\u6a94\u6848\u5217\u8868", "pages_url": "\u7db2\u9801\u9023\u7d50", "select_repo": "\u5132\u5b58\u5eab", "choose_file": "\u9078\u64c7\u6a94\u6848", "close": "\u95dc\u9589", "json_logs": "JSON \u65e5\u8a8c", "language": "\u8a9e\u8a00", "file_too_large_warning": "\u8b66\u544a\uff1a\u4e0b\u5217\u6a94\u6848\u8d85\u904e {limit} \u9650\u5236\uff0c\u7121\u6cd5\u4e0a\u50b3\uff1a {files}", "server_error": "\u4f3a\u670d\u5668\u932f\u8aa4\uff1a{detail}"}, "es": {"title": "Subidor de archivos", "drop_hint": "Arrastra un archivo aqu\u00ed o haz clic para seleccionar", "upload": "Subir", "refresh": "Actualizar", "settings": "Configuraci\u00f3n", "purge": "Eliminar", "confirm_purge": "\u00bfEst\u00e1 seguro de que desea eliminar permanentemente el repositorio {repo}?", "upload_success": "Subida exitosa", "upload_failed": "Error al subir", "files_list": "Archivos", "pages_url": "URL de las p\u00e1ginas", "select_repo": "Repositorio", "choose_file": "Elegir archivo", "close": "Cerrar", "json_logs": "Registros JSON", "language": "Idioma", "file_too_large_warning": "Advertencia: el/los siguiente(s) archivo(s) superan el l\u00edmite de {limit} y no se pueden cargar: {files}", "server_error": "Error del servidor: {detail}"}} with a JSON object literal)
+            const TRANSLATIONS = {"en": {"title": "Uploader", "drop_hint": "Drop a file here or click to select", "upload": "Upload", "refresh": "Refresh", "settings": "Settings", "purge": "Purge", "confirm_purge": "Are you sure you want to permanently delete the repository {repo}?", "upload_success": "Upload successful", "upload_failed": "Upload failed", "files_list": "Files", "pages_url": "Pages URL", "select_repo": "Repository", "choose_file": "Choose a file", "close": "Close", "json_logs": "JSON Logs", "language": "Language", "file_too_large_warning": "Warning: the following file(s) exceed the {limit} limit and cannot be uploaded: {files}", "server_error": "Server error: {detail}"}, "ja": {"title": "\u30a2\u30c3\u30d7\u30ed\u30fc\u30c0\u30fc", "drop_hint": "\u3053\u3053\u306b\u30d5\u30a1\u30a4\u30eb\u3092\u30c9\u30ed\u30c3\u30d7\u3059\u308b\u304b\u3001\u30af\u30ea\u30c3\u30af\u3057\u3066\u9078\u629e\u3057\u3066\u304f\u3060\u3055\u3044", "upload": "\u9001\u4fe1", "refresh": "\u66f4\u65b0", "settings": "\u8a2d\u5b9a", "purge": "\u524a\u9664", "confirm_purge": "\u672c\u5f53\u306b\u30ea\u30dd\u30b8\u30c8\u30ea {repo} \u3092\u5b8c\u5168\u306b\u524a\u9664\u3057\u307e\u3059\u304b\uff1f", "upload_success": "\u9001\u4fe1\u6210\u529f", "upload_failed": "\u9001\u4fe1\u5931\u6557", "files_list": "\u30d5\u30a1\u30a4\u30eb\u4e00\u89a7", "pages_url": "\u30da\u30fc\u30b8URL", "select_repo": "\u30ea\u30dd\u30b8\u30c8\u30ea", "choose_file": "\u30d5\u30a1\u30a4\u30eb\u3092\u9078\u629e", "close": "\u9589\u3058\u308b", "json_logs": "JSON\u30ed\u30b0", "language": "\u8a00\u8a9e", "file_too_large_warning": "\u8b66\u544a: \u6b21\u306e\u30d5\u30a1\u30a4\u30eb\u306f {limit} \u306e\u4e0a\u9650\u3092\u8d85\u3048\u3066\u3044\u308b\u305f\u3081\u30a2\u30c3\u30d7\u30ed\u30fc\u30c9\u3067\u304d\u307e\u305b\u3093: {files}", "server_error": "\u30b5\u30fc\u30d0\u30fc\u30a8\u30e9\u30fc: {detail}"}, "fr": {"title": "T\u00e9l\u00e9verseur", "drop_hint": "D\u00e9posez un fichier ici ou cliquez pour s\u00e9lectionner", "upload": "T\u00e9l\u00e9verser", "refresh": "Rafra\u00eechir", "settings": "Param\u00e8tres", "purge": "Purger", "confirm_purge": "\u00cates-vous s\u00fbr de vouloir supprimer d\u00e9finitivement le d\u00e9p\u00f4t {repo} ?", "upload_success": "T\u00e9l\u00e9versement r\u00e9ussi", "upload_failed": "\u00c9chec du t\u00e9l\u00e9versement", "files_list": "Fichiers", "pages_url": "URL des pages", "select_repo": "Repository", "choose_file": "Choisir un fichier", "close": "Fermer", "json_logs": "Journaux JSON", "language": "Langue", "file_too_large_warning": "Attention : le(s) fichier(s) suivant(s) d\u00e9passent la limite de {limit} et ne peuvent pas \u00eatre t\u00e9l\u00e9vers\u00e9s : {files}", "server_error": "Erreur serveur : {detail}"}, "fr-CA": {"title": "T\u00e9l\u00e9verseur de fichiers", "drop_hint": "D\u00e9posez un fichier ici ou cliquez pour s\u00e9lectionner", "upload": "T\u00e9l\u00e9verser", "refresh": "Rafra\u00eechir", "settings": "Param\u00e8tres", "purge": "Supprimer", "confirm_purge": "\u00cates-vous certain de vouloir supprimer d\u00e9finitivement le d\u00e9p\u00f4t {repo} ?", "upload_success": "T\u00e9l\u00e9versement r\u00e9ussi", "upload_failed": "\u00c9chec du t\u00e9l\u00e9versement", "files_list": "Fichiers", "pages_url": "URL des pages", "select_repo": "D\u00e9p\u00f4t", "choose_file": "Choisir un fichier", "close": "Fermer", "json_logs": "Journaux JSON", "language": "Langue", "file_too_large_warning": "Attention : le(s) fichier(s) suivant(s) d\u00e9passent la limite de {limit} et ne peuvent pas \u00eatre t\u00e9l\u00e9vers\u00e9s : {files}", "server_error": "Erreur serveur : {detail}"}, "ru": {"title": "\u0417\u0430\u0433\u0440\u0443\u0437\u0447\u0438\u043a", "drop_hint": "\u041f\u0435\u0440\u0435\u0442\u0430\u0449\u0438\u0442\u0435 \u0444\u0430\u0439\u043b \u0441\u044e\u0434\u0430 \u0438\u043b\u0438 \u043d\u0430\u0436\u043c\u0438\u0442\u0435 \u0434\u043b\u044f \u0432\u044b\u0431\u043e\u0440\u0430", "upload": "\u0417\u0430\u0433\u0440\u0443\u0437\u0438\u0442\u044c", "refresh": "\u041e\u0431\u043d\u043e\u0432\u0438\u0442\u044c", "settings": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438", "purge": "\u0423\u0434\u0430\u043b\u0438\u0442\u044c", "confirm_purge": "\u0412\u044b \u0443\u0432\u0435\u0440\u0435\u043d\u044b, \u0447\u0442\u043e \u0445\u043e\u0442\u0438\u0442\u0435 \u043d\u0430\u0432\u0441\u0435\u0433\u0434\u0430 \u0443\u0434\u0430\u043b\u0438\u0442\u044c \u0440\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439 {repo}?", "upload_success": "\u0424\u0430\u0439\u043b \u0443\u0441\u043f\u0435\u0448\u043d\u043e \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d", "upload_failed": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0437\u0430\u0433\u0440\u0443\u0437\u043a\u0438 \u0444\u0430\u0439\u043b\u0430", "files_list": "\u0424\u0430\u0439\u043b\u044b", "pages_url": "URL \u0441\u0442\u0440\u0430\u043d\u0438\u0446", "select_repo": "\u0420\u0435\u043f\u043e\u0437\u0438\u0442\u043e\u0440\u0438\u0439", "choose_file": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0444\u0430\u0439\u043b", "close": "\u0417\u0430\u043a\u0440\u044b\u0442\u044c", "json_logs": "\u0416\u0443\u0440\u043d\u0430\u043b\u044b JSON", "language": "\u042f\u0437\u044b\u043a", "file_too_large_warning": "\u0412\u043d\u0438\u043c\u0430\u043d\u0438\u0435: \u0441\u043b\u0435\u0434\u0443\u044e\u0449\u0438\u0435 \u0444\u0430\u0439\u043b(\u044b) \u043f\u0440\u0435\u0432\u044b\u0448\u0430\u044e\u0442 \u043e\u0433\u0440\u0430\u043d\u0438\u0447\u0435\u043d\u0438\u0435 {limit} \u0438 \u043d\u0435 \u043c\u043e\u0433\u0443\u0442 \u0431\u044b\u0442\u044c \u0437\u0430\u0433\u0440\u0443\u0436\u0435\u043d\u044b: {files}", "server_error": "\u041e\u0448\u0438\u0431\u043a\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430: {detail}"}, "ar": {"title": "\u0631\u0627\u0641\u0639 \u0627\u0644\u0645\u0644\u0641\u0627\u062a", "drop_hint": "\u0627\u0633\u062d\u0628 \u0645\u0644\u0641\u064b\u0627 \u0647\u0646\u0627 \u0623\u0648 \u0627\u0646\u0642\u0631 \u0644\u0644\u0627\u062e\u062a\u064a\u0627\u0631", "upload": "\u0631\u0641\u0639", "refresh": "\u062a\u062d\u062f\u064a\u062b", "settings": "\u0627\u0644\u0625\u0639\u062f\u0627\u062f\u0627\u062a", "purge": "\u062a\u0637\u0647\u064a\u0631", "confirm_purge": "\u0647\u0644 \u0623\u0646\u062a \u0645\u062a\u0623\u0643\u062f \u0623\u0646\u0643 \u062a\u0631\u064a\u062f \u062d\u0630\u0641 \u0627\u0644\u0645\u0633\u062a\u0648\u062f\u0639 {repo} \u0646\u0647\u0627\u0626\u064a\u064b\u0627\u061f", "upload_success": "\u062a\u0645 \u0631\u0641\u0639 \u0627\u0644\u0645\u0644\u0641 \u0628\u0646\u062c\u0627\u062d", "upload_failed": "\u0641\u0634\u0644 \u0631\u0641\u0639 \u0627\u0644\u0645\u0644\u0641", "files_list": "\u0627\u0644\u0645\u0644\u0641\u0627\u062a", "pages_url": "\u0631\u0627\u0628\u0637 \u0627\u0644\u0635\u0641\u062d\u0627\u062a", "select_repo": "\u0627\u0644\u0645\u0633\u062a\u0648\u062f\u0639", "choose_file": "\u0627\u062e\u062a\u0631 \u0645\u0644\u0641\u064b\u0627", "close": "\u0625\u063a\u0644\u0627\u0642", "json_logs": "\u0633\u062c\u0644\u0627\u062a JSON", "language": "\u0627\u0644\u0644\u063a\u0629", "file_too_large_warning": "\u062a\u062d\u0630\u064a\u0631: \u0627\u0644\u0645\u0644\u0641(\u0645\u0644\u0641\u0627\u062a) \u0627\u0644\u062a\u0627\u0644\u064a\u0629 \u062a\u062a\u062c\u0627\u0648\u0632 \u0627\u0644\u062d\u062f {limit} \u0648\u0644\u0627 \u064a\u0645\u0643\u0646 \u062a\u062d\u0645\u064a\u0644\u0647\u0627: {files}", "server_error": "\u062e\u0637\u0623 \u0641\u064a \u0627\u0644\u062e\u0627\u062f\u0645: {detail}"}, "zh-TW": {"title": "\u6a94\u6848\u4e0a\u50b3\u5668", "drop_hint": "\u5c07\u6a94\u6848\u62d6\u66f3\u5230\u6b64\u8655\u6216\u9ede\u64ca\u9078\u64c7", "upload": "\u4e0a\u50b3", "refresh": "\u91cd\u65b0\u6574\u7406", "settings": "\u8a2d\u5b9a", "purge": "\u6e05\u9664", "confirm_purge": "\u60a8\u78ba\u5b9a\u8981\u6c38\u4e45\u522a\u9664\u5132\u5b58\u5eab {repo} \u55ce\uff1f", "upload_success": "\u4e0a\u50b3\u6210\u529f", "upload_failed": "\u4e0a\u50b3\u5931\u6557", "files_list": "\u6a94\u6848\u5217\u8868", "pages_url": "\u7db2\u9801\u9023\u7d50", "select_repo": "\u5132\u5b58\u5eab", "choose_file": "\u9078\u64c7\u6a94\u6848", "close": "\u95dc\u9589", "json_logs": "JSON \u65e5\u8a8c", "language": "\u8a9e\u8a00", "file_too_large_warning": "\u8b66\u544a\uff1a\u4e0b\u5217\u6a94\u6848\u8d85\u904e {limit} \u9650\u5236\uff0c\u7121\u6cd5\u4e0a\u50b3\uff1a {files}", "server_error": "\u4f3a\u670d\u5668\u932f\u8aa4\uff1a{detail}"}, "es": {"title": "Subidor de archivos", "drop_hint": "Arrastra un archivo aqu\u00ed o haz clic para seleccionar", "upload": "Subir", "refresh": "Actualizar", "settings": "Configuraci\u00f3n", "purge": "Eliminar", "confirm_purge": "\u00bfEst\u00e1 seguro de que desea eliminar permanentemente el repositorio {repo}?", "upload_success": "Subida exitosa", "upload_failed": "Error al subir", "files_list": "Archivos", "pages_url": "URL de las p\u00e1ginas", "select_repo": "Repositorio", "choose_file": "Elegir archivo", "close": "Cerrar", "json_logs": "Registros JSON", "language": "Idioma", "file_too_large_warning": "Advertencia: el/los siguiente(s) archivo(s) superan el l\u00edmite de {limit} y no se pueden cargar: {files}", "server_error": "Error del servidor: {detail}"}};
+            (function(){
+                function detectLang(){
+                    try{ return (navigator.language||navigator.userLanguage||'en').split('-')[0]; }catch(e){return 'en'}
+                }
+                var CURRENT_LANG = (function(){ var l = detectLang(); return TRANSLATIONS && TRANSLATIONS[l] ? l : 'en'; })();
+                function t(key, vars){
+                    var s = (TRANSLATIONS && TRANSLATIONS[CURRENT_LANG] && TRANSLATIONS[CURRENT_LANG][key]) ||
+                                    (TRANSLATIONS && TRANSLATIONS['en'] && TRANSLATIONS['en'][key]) || key;
+                    if(vars){ for(var k in vars){ s = s.replace('{'+k+'}', vars[k]); } }
+                    return s;
+                }
+                function applyI18n(){
+                    try{
+                        document.querySelectorAll('[data-i18n]').forEach(function(el){
+                            var key = el.getAttribute('data-i18n');
+                            var vars = {};
+                            try{ var raw = el.getAttribute('data-i18n-vars'); if(raw) vars = JSON.parse(raw); }catch(e){}
+                            var txt = t(key, vars);
+                            if(txt) el.textContent = txt;
+                        });
+                    }catch(e){/* ignore */}
+                }
+                window.setUploaderLang = function(lang){ if(TRANSLATIONS && TRANSLATIONS[lang]){ CURRENT_LANG = lang; applyI18n(); } };
+                document.addEventListener('DOMContentLoaded', applyI18n);
+            })();
+        </script>
+        <style>
+        :root{--google-blue:#1a73e8; --bg:#f5f7fb; --page-grad-end:#ffffff; --card:#ffffff; --muted:#5f6368; --text:#202124; --accent-2:#4285f4;}
+        @media (prefers-color-scheme: dark) {
+            :root{ --bg:#071018; --page-grad-end:#031018; --card:#07121a; --muted:#9aa4ad; --text:#e6eef8; --google-blue:#3aa0ff; --accent-2:#1a73e8; }
+        }
+        html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),var(--page-grad-end));font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;color:var(--text)}
+        .topbar{background:linear-gradient(90deg,var(--google-blue),var(--accent-2));color:white;padding:14px 20px;display:flex;align-items:center;gap:16px}
+        .logo{width:40px;height:40px;border-radius:8px;background:rgba(255,255,255,0.08);display:flex;align-items:center;justify-content:center;font-weight:700}
+        .title{font-size:18px;font-weight:600}
+        .container{max-width:980px;margin:28px auto;padding:0 20px}
+        .hero{display:flex;gap:18px;align-items:center;margin-bottom:18px}
+        .card{background:var(--card);border-radius:12px;box-shadow:0 1px 2px rgba(60,64,67,0.08);padding:18px}
+        .card--large{flex:1}
+        .files-list{margin:0;padding:0;list-style:none}
+        .file-item{display:flex;align-items:center;justify-content:space-between;padding:10px 12px;border-radius:8px;margin-bottom:8px;background:linear-gradient(180deg,rgba(0,0,0,0.01),transparent)}
+        .file-item a{color:var(--google-blue);text-decoration:none;font-weight:500}
+        .meta{color:var(--muted);font-size:13px}
+        .empty{padding:28px;text-align:center;color:var(--muted)}
+                .app-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px}
+                .app-tile{background:linear-gradient(180deg,#fff,#f8fbff);border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:8px;align-items:flex-start}
+                .app-icon{width:40px;height:40px;border-radius:8px;background:var(--google-blue);display:inline-flex;align-items:center;justify-content:center;color:white;font-weight:700}
+                /* Quick-action glass effect (fallback safe) */
+                .qa-tile{position:relative;transition:transform .18s ease,box-shadow .18s ease, background-color .18s ease;border-radius:8px;cursor:pointer}
+                .qa-tile .inner{padding:10px;border-radius:8px;display:flex;flex-direction:column;gap:8px;align-items:center}
+                @supports ((-webkit-backdrop-filter: blur(6px)) or (backdrop-filter: blur(6px))) {
+                    @media (pointer: fine) {
+                        .qa-tile:hover{transform:translateY(-4px);box-shadow:0 10px 30px rgba(16,24,40,0.12)}
+                        .qa-tile:hover .inner{background:rgba(255,255,255,0.55);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border:1px solid rgba(255,255,255,0.5)}
+                    }
+                }
+                @media (prefers-reduced-transparency: reduce), (prefers-reduced-motion: reduce) {
+                    .qa-tile:hover{transform:none;box-shadow:none}
+                    .qa-tile .inner{background:transparent;border:1px solid transparent}
+                }
+                .qa-tile:focus{outline:2px solid rgba(26,115,232,0.18);outline-offset:2px}
+                footer{max-width:980px;margin:18px auto;color:var(--muted);font-size:13px}
+        @media (max-width:600px){.hero{flex-direction:column;align-items:stretch}}
+    </style>
+</head>
+<body>
+    <div class="topbar">
+    <div class="logo">POI</div>
+        <div class="title" data-i18n="files_list">Repository Files</div>
+        <div style="flex:1"></div>
+        <div style="display:flex;align-items:center;gap:8px;margin-right:12px">
+            <label for="lang-select" style="font-size:13px;color:rgba(255,255,255,0.9);margin-right:6px" data-i18n="language">Language</label>
+            <select id="lang-select" style="padding:6px;border-radius:6px;border:1px solid rgba(255,255,255,0.08);background:transparent">
+              <option value="en">English</option>
+              <option value="fr">Français</option>
+              <option value="fr-CA">Français (Canada)</option>
+              <option value="ja">日本語</option>
+              <option value="ru">Русский</option>
+              <option value="ar">العربية</option>
+              <option value="zh-TW">繁體中文</option>
+              <option value="es">Español</option>
+            </select>
+        </div>
+        <div style="opacity:.92;font-size:13px">poipoisiophina/poipoisiophina.github.io</div>
+    </div>
+
+    <main class="container">
+        <div class="hero">
+            <div class="card card--large">
+                <h2 style="margin:0 0 8px 0" data-i18n="files_list">Files in this repository</h2>
+                <div id="note" class="meta">This page lists repository files using the GitHub REST API. Click any file to open it on GitHub.</div>
+                <ul id="files" class="files-list" style="margin-top:12px"></ul>
+                <div id="loading" class="empty" style="display:none">Loading files…</div>
+                <div id="error" class="empty" style="display:none"></div>
+            </div>
+
+            <div style="width:280px">
+                <div class="card">
+                    <h3 style="margin:0 0 10px 0" data-i18n="files_list">Quick actions</h3>
+                    <div class="app-grid">
+                        <div class="qa-tile" id="action-upload"><div class="inner" style="background:rgba(255,255,255,0.06)"><div class="app-icon">U</div><div style="font-weight:600" data-i18n="upload">Upload</div><div class="meta">Use the uploader to add files to this repo.</div></div></div>
+                        <div class="qa-tile" id="action-refresh"><div class="inner" style="background:rgba(255,255,255,0.06)"><div class="app-icon">F</div><div style="font-weight:600" data-i18n="refresh">Files</div><div class="meta">Browse repository contents via the API.</div></div></div>
+                        <div class="qa-tile" id="action-settings"><div class="inner" style="background:rgba(255,255,255,0.06)"><div class="app-icon">S</div><div style="font-weight:600" data-i18n="settings">Settings</div><div class="meta">Manage repository from GitHub.</div></div></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>If this repository is empty, the uploader can create the initial "index.html" and enable GitHub Pages for the <code>main</code> branch.</footer>
+
+    <script>
+        (function(){
+        const repo = "poipoisiophina/poipoisiophina.github.io";
+            const out = document.getElementById('files');
+            const loading = document.getElementById('loading');
+            const error = document.getElementById('error');
+            async function listFiles(){
+                if(!repo){error.style.display='block'; error.textContent='No repository configured'; return}
+                loading.style.display='block'; out.innerHTML=''; error.style.display='none';
+                try{
+                    const resp = await fetch('https://api.github.com/repos/'+repo+'/contents');
+                    loading.style.display='none';
+                    if(!resp.ok){ error.style.display='block'; error.textContent='Could not fetch contents: '+resp.status+' '+resp.statusText; return }
+                    const data = await resp.json();
+                    data.sort((a,b)=> (a.type===b.type)? a.name.localeCompare(b.name): a.type.localeCompare(b.type));
+                    if(!data || data.length===0){ out.innerHTML='<li class="empty">This repository is empty.</li>'; return }
+                    for(const file of data){
+                        const li = document.createElement('li'); li.className='file-item';
+                        const left = document.createElement('div');
+                        const a = document.createElement('a'); a.textContent = file.name + (file.type==='dir'?'/':'');
+                        // Prefer Pages URL: owner.github.io[/repo]/<path>
+                        try {
+                            const repo = "poipoisiophina/poipoisiophina.github.io";
+                            let pagesUrl = file.html_url || '#';
+                            if (repo) {
+                                const parts = repo.split('/');
+                                if (parts.length === 2) {
+                                    const owner = parts[0];
+                                    const repoName = parts[1];
+                                    const host = owner + '.github.io';
+                                    if (repoName.toLowerCase() === (owner.toLowerCase() + '.github.io') || repoName.toLowerCase().endsWith('.github.io')) {
+                                        // user/organization pages
+                                        pagesUrl = 'https://' + host + '/' + encodeURIComponent(file.name);
+                                    } else {
+                                        // project pages
+                                        pagesUrl = 'https://' + host + '/' + encodeURIComponent(repoName) + '/' + encodeURIComponent(file.name);
+                                    }
+                                }
+                            }
+                            a.href = pagesUrl;
+                        } catch (e) { a.href = file.html_url || '#'; }
+                        a.target='_blank';
+                        left.appendChild(a);
+                        const right = document.createElement('div'); right.className='meta'; right.textContent = file.type==='dir' ? 'directory' : (file.size ? (Math.round(file.size/1024)+' KB') : 'file');
+                        li.appendChild(left); li.appendChild(right); out.appendChild(li);
+                    }
+                }catch(err){ loading.style.display='none'; error.style.display='block'; error.textContent='Error: '+String(err) }
+            }
+            listFiles();
+            })();
+            // Language selector wiring for embedded translations
+            (function(){
+                try{
+                    const select = document.getElementById('lang-select');
+                    function detectLang(){ try{ return (navigator.language||navigator.userLanguage||'en').split('-')[0]; }catch(e){return 'en'} }
+                    const TRANSLATIONS_LOCAL = typeof TRANSLATIONS !== 'undefined' ? TRANSLATIONS : {};
+                    function applyTranslations(lang){
+                        try{
+                            const dict = TRANSLATIONS_LOCAL[lang] || TRANSLATIONS_LOCAL['en'] || {};
+                            document.querySelectorAll('[data-i18n]').forEach(function(el){
+                                var key = el.getAttribute('data-i18n');
+                                var vars = {};
+                                try{ var raw = el.getAttribute('data-i18n-vars'); if(raw) vars = JSON.parse(raw); }catch(e){}
+                                var txt = dict && dict[key] ? dict[key] : (TRANSLATIONS_LOCAL['en'] && TRANSLATIONS_LOCAL['en'][key]) || el.textContent;
+                                if(txt){ for(var k in vars){ txt = txt.replace('{'+k+'}', vars[k]); } el.textContent = txt }
+                            });
+                        }catch(e){}
+                    }
+                    if(select){
+                        const stored = localStorage.getItem('uploader_lang') || '';
+                        var initial = stored || detectLang();
+                        if(!TRANSLATIONS_LOCAL[initial]) initial = 'en';
+                        select.value = initial;
+                        applyTranslations(initial);
+                        select.addEventListener('change', function(){ var v=this.value; localStorage.setItem('uploader_lang', v); applyTranslations(v); });
+                    } else {
+                        // If no selector, still apply based on browser
+                        var l = detectLang(); if(!TRANSLATIONS_LOCAL[l]) l='en'; applyTranslations(l);
+                    }
+                }catch(e){}
+            })();
+            // Wire quick-action tiles
+            (function(){
+                try {
+                    const uploadBtn = document.getElementById('action-upload');
+                    const refreshBtn = document.getElementById('action-refresh');
+                    const settingsBtn = document.getElementById('action-settings');
+                    // Resolve a hosted_url at generation time so the generated static page contains a real URL
+                    (function(){
+                        var HOSTED_URL_RESOLVED = "https://vrc-7f3.pages.dev";
+                        if (uploadBtn) uploadBtn.addEventListener('click', ()=> window.open(HOSTED_URL_RESOLVED, '_blank'));
+                    })();
+                    if (refreshBtn) refreshBtn.addEventListener('click', ()=> window.location.reload());
+                    if (settingsBtn) settingsBtn.addEventListener('click', ()=> {
+                        try {
+                            const repo = 'poipoisiophina/poipoisiophina.github.io';
+                            if (!repo) return;
+                            const parts = repo.split('/');
+                            if (parts.length !== 2) return;
+                            const owner = parts[0];
+                            const repoName = parts[1];
+                            const settingsUrl = 'https://github.com/' + encodeURIComponent(owner) + '/' + encodeURIComponent(repoName) + '/settings/pages';
+                            window.open(settingsUrl, '_blank');
+                        } catch (e) { /* ignore */ }
+                    });
+                } catch (e) { /* ignore */ }
+            })();
+        </script>
+    </body>
+    </html>
+    

@@ -36,18 +36,32 @@ a{color:var(--lnk)}
 .btn.alt{background:transparent;color:var(--fg);border:1px solid rgba(var(--ov),.3)}
 .card{background:linear-gradient(160deg,rgba(var(--ov),.06),rgba(var(--ov),.02));border:1px solid var(--line);border-radius:24px;padding:1.6rem;margin:1rem 0}
 .card h3{margin:.2rem 0 .4rem;font-size:1.3rem}
-.files{list-style:none;padding:0;margin:.8rem 0 0}
-.files li{display:flex;justify-content:space-between;gap:12px;padding:.5rem .2rem;border-bottom:1px solid var(--line);font-size:.95rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(10rem,1fr));gap:6px}
+.tile{aspect-ratio:1;border:0;padding:0;border-radius:14px;overflow:hidden;background:rgba(var(--ov),.07);cursor:pointer;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--fg);font:inherit}
+.tile img,.tile video{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s}
+.tile:hover img,.tile:hover video{transform:scale(1.06)}
+.tile:focus-visible{outline:2px solid var(--acc);outline-offset:2px}
+.tile.vid::after{content:"";position:absolute;right:10px;bottom:10px;width:0;height:0;border-left:14px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent;filter:drop-shadow(0 1px 3px rgba(0,0,0,.6))}
+.ext{font-weight:700;font-size:1.3rem;color:var(--acc)}
+.nm{font-size:.75rem;color:var(--mut);padding:0 8px;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+dialog{border:0;padding:0;background:rgba(0,0,0,.94);color:#fff;width:100vw;height:100vh;max-width:100vw;max-height:100vh}
+dialog::backdrop{background:#000}
+dialog[open]{display:flex;flex-direction:column;align-items:center;justify-content:center}
+#lb-body{max-width:96vw;max-height:84vh;display:flex}
+#lb-body img,#lb-body video{max-width:96vw;max-height:84vh;border-radius:10px}
+#lb-cap{margin:.8rem 0 0;font-size:.9rem;color:#cfd6dd}
+#lb-x{position:absolute;top:14px;right:18px;background:rgba(255,255,255,.14);color:#fff;border:0;border-radius:50%;width:42px;height:42px;font-size:1.6rem;line-height:1;cursor:pointer}
+[hidden]{display:none!important}
 .meta{color:var(--mut)}
 footer{margin-top:4rem;border-top:1px solid var(--line);color:var(--mut);font-size:.88rem;padding:1.4rem 0 2.5rem}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","dateModified":"2026-11-17","mainEntity":{"@type":"Person","name":"poipoisiophina","alternateName":"poipoisiophina","url":"https://poipoisiophina.github.io/","description":"From Sealand. Keeper of ancora.","homeLocation":{"@type":"Place","name":"Sealand"},"sameAs":["https://github.com/poipoisiophina"]}}</script>
 </head>
 <body>
-<header><div class="wrap"><a class="brand" href="https://poipoisiophina.github.io/">poipoisiophina</a><nav aria-label="Main"><a href="#about">About</a><a href="#ancora">ancora</a><a href="#files">Files</a></nav></div></header>
+<header><div class="wrap"><a class="brand" href="https://poipoisiophina.github.io/">poipoisiophina</a><nav aria-label="Main"><a href="#about">About</a><a href="#ancora">ancora</a><a href="#gallery">Gallery</a></nav></div></header>
 <main class="wrap">
 <h1>Ahoy, I am poipoisiophina, from Sealand.</h1>
-<p class="lead">A small, free page from a very small, very free place. Look around, take the thing I keep afloat, and send a file across the water if you like.</p>
+<p class="lead">A small, free page from a very small, very free place. Look around, take the thing I keep afloat, and see what has washed ashore.</p>
 
 <h2 id="about">About me</h2>
 <p>I go by <strong>poipoisiophina</strong> online. I am from Sealand, the little sea fort in the North Sea that flies its own flag and keeps its own time. Our motto is <em>E Mare, Libertas</em>: from the sea, freedom. Out here things move slowly, the kettle stays on, and everyone waves at passing ships. My harbour on <a href="https://github.com/poipoisiophina">GitHub</a> is open to visitors.</p>
@@ -59,27 +73,40 @@ footer{margin-top:4rem;border-top:1px solid var(--line);color:var(--mut);font-si
 <p><a class="btn" href="https://poipoisiophina.github.io/ancora/">Visit the ancora website</a> <a class="btn alt" href="https://poipoisiophina.github.io/ancora/thumb-gate.html">What is Thumb Gate?</a> <a class="btn alt" href="https://github.com/poipoisiophina/ancora/releases">Download</a></p>
 </div>
 
-<h2 id="files">Files</h2>
-<div class="card">
-<h3>Message in a bottle (upload widget)</h3>
-<p class="meta">A file dropped here sails into the <code>poipoisiophina/poipoisiophina.github.io</code> harbour on GitHub.</p>
-<p><a class="btn" href="https://vrc-7f3.pages.dev" rel="noopener" target="_blank">Open the uploader</a> <a class="btn alt" href="https://github.com/poipoisiophina/poipoisiophina.github.io/upload/main" rel="noopener" target="_blank">Upload on GitHub</a></p>
-<ul id="file-list" class="files"><li class="meta">Loading files...</li></ul>
-<noscript><p class="meta">Turn on JavaScript to see the file list, or open the <a href="https://github.com/poipoisiophina/poipoisiophina.github.io">repository</a>.</p></noscript>
-</div>
+<section id="gallery" hidden>
+<h2>Gallery</h2>
+<div id="grid" class="grid"></div>
+</section>
 </main>
+<dialog id="lb" aria-label="Viewer"><button id="lb-x" type="button" aria-label="Close">&times;</button><div id="lb-body"></div><p id="lb-cap"></p></dialog>
 <footer><div class="wrap"><p>poipoisiophina flies the flag of Sealand. ancora is not affiliated with Meta, Valve or VRChat.</p></div></footer>
 <script>
 (function(){
-var hidden=["index.html", "404.html", "robots.txt", "sitemap.xml", "favicon.svg", ".nojekyll"],out=document.getElementById("file-list");
-fetch('https://api.github.com/repos/poipoisiophina/poipoisiophina.github.io/contents').then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
- d=d.filter(function(f){return hidden.indexOf(f.name)<0}).sort(function(a,b){return a.name.localeCompare(b.name)});
- out.textContent='';
- if(!d.length){out.innerHTML='<li class="meta">No files yet.</li>';return}
- d.forEach(function(f){var li=document.createElement('li'),a=document.createElement('a'),s=document.createElement('span');
-  a.href=encodeURIComponent(f.name);a.textContent=f.name+(f.type==='dir'?'/':'');s.className='meta';s.textContent=f.type==='dir'?'folder':Math.max(1,Math.round((f.size||0)/1024))+' KB';
-  li.appendChild(a);li.appendChild(s);out.appendChild(li)});
-}).catch(function(){out.innerHTML='<li class="meta">The file list could not be loaded.</li>'});
+var hidden=["index.html", "404.html", "robots.txt", "sitemap.xml", "favicon.svg", ".nojekyll", "humans.txt"],grid=document.getElementById("grid"),sec=document.getElementById("gallery"),lb=document.getElementById("lb"),body=document.getElementById("lb-body"),cap=document.getElementById("lb-cap");
+var IMG=/[.](png|jpe?g|gif|webp|avif|svg|bmp)$/i,VID=/[.](mp4|webm|mov|m4v)$/i;
+function open(f){
+ var src=encodeURIComponent(f.name);
+ if(IMG.test(f.name)){body.innerHTML="";var i=document.createElement("img");i.src=src;i.alt=f.name;body.appendChild(i)}
+ else if(VID.test(f.name)){body.innerHTML="";var v=document.createElement("video");v.src=src;v.controls=true;v.autoplay=true;body.appendChild(v)}
+ else{window.open(src,"_blank");return}
+ cap.textContent=f.name;lb.showModal();
+}
+lb.addEventListener("click",function(e){if(e.target===lb||e.target.id==="lb-x"){lb.close()}});
+lb.addEventListener("close",function(){body.innerHTML=""});
+fetch("https://api.github.com/repos/poipoisiophina/poipoisiophina.github.io/contents").then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){
+ d=d.filter(function(f){return f.type==="file"&&hidden.indexOf(f.name)<0}).sort(function(a,b){return a.name.localeCompare(b.name)});
+ if(!d.length)return;
+ d.forEach(function(f){
+  var t=document.createElement("button");t.type="button";t.className="tile";t.title=f.name;
+  var src=encodeURIComponent(f.name);
+  if(IMG.test(f.name)){var i=document.createElement("img");i.loading="lazy";i.decoding="async";i.src=src;i.alt=f.name;t.appendChild(i)}
+  else if(VID.test(f.name)){var v=document.createElement("video");v.muted=true;v.preload="metadata";v.src=src+"#t=0.1";t.appendChild(v);t.classList.add("vid")}
+  else{var x=document.createElement("span");x.className="ext";x.textContent=(f.name.split(".").pop()||"file").slice(0,5).toUpperCase();t.appendChild(x);var n=document.createElement("span");n.className="nm";n.textContent=f.name;t.appendChild(n)}
+  t.addEventListener("click",function(){open(f)});
+  grid.appendChild(t);
+ });
+ sec.hidden=false;
+}).catch(function(){});
 })();
 </script>
 </body>
